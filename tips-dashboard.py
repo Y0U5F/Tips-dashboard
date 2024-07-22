@@ -60,11 +60,10 @@ with c1:
 
 with c2:
     st.text("Smoker/Non-smoker vs. Tips")
-    fig = px.bar(data_frame=df, names='smoker', values='tip', color=cat_filter, )
+    fig = px.pie(data_frame=df, names='smoker', values='tip', color=cat_filter, )
     st.plotly_chart(fig, use_container_width=True)
 
 with c3:
     st.text("Smoker/Non-smoker vs. Tips")
-    fig = px.bar(data_frame=df, names='day', values='tip', color=cat_filter,hole=0.4 )
+    fig = px.pie(data_frame=df, names='day', values='tip', color=cat_filter,hole=0.4 )
     st.plotly_chart(fig, use_container_width=True)
-
